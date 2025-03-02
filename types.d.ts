@@ -25,3 +25,9 @@ interface IProductInput {
   isPublished?: boolean;
   reviews?: string[];
 }
+
+type ClientSetting = ISettingInput & {
+  currency: string;
+};
+
+type SiteCurrency = z.infer<typeof SiteCurrencySchema>;
